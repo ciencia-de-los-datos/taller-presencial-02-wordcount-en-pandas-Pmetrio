@@ -26,10 +26,10 @@ def load_input(input_directory):
     concatenated_df = pd.concat(dataframes, ignore_index=True)
     return concatenated_df
 
-df = load_input("input")
-print(df)
+# df = load_input("input")
+# print(df)
 
-load_input("input")
+# load_input("input")
 #tarea limpiar archivos palabras que tienen mayusculas y minusculas, eliminar puntuacion y acentos, como ñ
 def clean_text(dataframe):
     """Text cleaning"""
@@ -74,7 +74,7 @@ def count_words(dataframe):
 def save_output(dataframe, output_filename):
     """Save output to a file."""
 
-    dataframe.to_csv(output_filename, sep=";" , index=True, header=False) 
+    dataframe.to_csv(output_filename, sep="\t" , index=True, header=False) 
 
 # df = load_input("input")
 # df = clean_text(df)
